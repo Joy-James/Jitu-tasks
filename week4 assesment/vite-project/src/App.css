@@ -1,0 +1,17 @@
+*{
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.Movie{
+ padding: auto;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+}
+.Movie p{
+  font-size: 1rem;}
