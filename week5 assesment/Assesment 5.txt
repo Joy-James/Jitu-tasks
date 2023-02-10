@@ -1,0 +1,72 @@
+1.What is the difference between state and props?
+
+-State is the local state of the component which cannot be accessed and modified outside of the component.
+ -It's equivalent to local variables in a function. 
+
+
+-Props, on the other hand, make components reusable by giving components the ability
+ to receive data from their parent component in the form of props.
+-Props are used to customize the behavior of the child component, but they cannot change over time.
+
+
+2.With the following code blocks, can you say what will happen in each of these instances?
+
+    const c1 = 1; c1 = 3;
+
+
+    const c2 = “hello”; c2 += “world!”;
+
+    const c3 = {}; c3.name = “Geoff”; c3.someValue = “Sausage”; c3 = {};
+
+
+      //In the first code block, you are trying to reassign a value to a constant declared 
+      //with const, which is not allowed in JavaScript.
+      //You will receive an error message:
+
+      // In the second code block, you are updating a string value, which is allowed in JavaScript. 
+      //The string "hello" is assigned to c2, and then the expression c2 += "world!" will concatenate the string "world!" to c2, so the final value of c2 will be "helloworld!".
+
+      // In the third code block, you are updating an object property, which is allowed in JavaScript. 
+      //The object {} is assigned to c3, and then you add properties name and someValue to the object.
+       // However, you are then trying to reassign c3 to a new object {}, which is not allowed in JavaScript because c3 was declared with const. 
+       //You will receive an error message:
+     
+
+3.Outline the various stages of the React.js lifecycle.
+  A) Initial Render or Mount-Mounting means putting elements into the DOM.
+     React has four built-in methods that gets called, in this order, when mounting a component:
+
+        -constructor()
+       - getDerivedStateFromProps()
+       - render()
+       - componentDidMount()
+
+  B) Update -when the state used in a component is changed.
+     A component is updated whenever there is a change in the component's state or props.
+
+      React has severalbuilt-in methods that gets called, in this order, when a component is updated:
+
+          -getDerivedStateFromProps()
+          -shouldComponentUpdate()
+          -render()
+          -componentDidUpdate()
+
+  C)Unmount-The next phase in the lifecycle is when a component is removed from the DOM.
+      It is the final phase of the react component lifecycle.
+      It is called when a component instance is destroyed and unmounted from the DOM.
+      This phase contains only one method ;
+
+        -componentWillUnmount()
+
+4.How are controlled and uncontrolled components different?
+     In a controlled component, form data is handled by a React component.
+     Whereas in uncontrolled components, form data is handled by the DOM itself.
+     To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM
+
+5.Explain what three dots mean in React.
+      These three dots are called the spread syntax or spread operator. 
+      The spread syntax is a feature of ES6, and it's also used in React.
+      Spread syntax allows you to deconstruct an array or object into separate variables
+       Example; let arr=(45,56,60)
+                console.log(... arr);
+
